@@ -1,11 +1,15 @@
 "use client";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
+import { useTheme } from "next-themes";
 const ThemeModeItem = () => {
-  const themeColors: string[] = ["Light", "Dark", "System"];
-  const [index, setIndex] = useState(0);
+  const { setTheme } = useTheme();
+  const themeColors: string[] = ["Light", "System", "Dark"];
+  const [index, setIndex] = useState(1);
+  setTheme(themeColors[index].toLowerCase());
   const handleClick = () => {
-    setIndex((index + 1) % themeColors.length);
+    setIndex((index) => (index + 1) % themeColors.length);
+    setTheme(themeColors[index].toLowerCase());
   };
   return (
     <Badge onClick={handleClick} className="py-0.1">

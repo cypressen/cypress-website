@@ -17,25 +17,19 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
-
+import StatusItem from "./status-item";
 const UserItem = () => {
-  const id: string = "kei";
-  const status: string = "admin";
-
   return (
     <>
-      <Badge className="bg-blue-400" variant={"outline"}>
-        {id} | {status}
-      </Badge>
+      <StatusItem />
       <DropdownMenu>
-        <DropdownMenuTrigger>
-          <Avatar className="h-7 w-7">
+        <DropdownMenuTrigger className="rounded-full border-2 hover:border-foreground">
+          <Avatar className="h-7 w-7 ">
             <AvatarImage src="/kei.png" alt="cypress" />
             <AvatarFallback> </AvatarFallback>
           </Avatar>
         </DropdownMenuTrigger>
-        <DropdownMenuContent>
+        <DropdownMenuContent className="maple-font">
           <DropdownMenuItem>
             <Link href="/user" passHref>
               User
