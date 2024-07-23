@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useTheme } from "next-themes";
 const ThemeModeItem = () => {
   const { setTheme } = useTheme();
-  const themeColors: string[] = ["Light", "System", "Dark"];
+  const themeColors: string[] = ["Light", "Dark", "System"];
   const [index, setIndex] = useState(1);
   setTheme(themeColors[index].toLowerCase());
   const handleClick = () => {
