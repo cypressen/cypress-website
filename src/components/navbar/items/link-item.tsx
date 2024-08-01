@@ -16,7 +16,7 @@ const LinkItems = () => {
   const links: LinkItemProps[] = [
     { href: "/blogs", text: "Blogs" },
     { href: "/gallery", text: "Gallery" },
-    { href: "/rank-list", text: "Rank List" },
+    { href: "/lists", text: "統計表" }, // 日本語
     { href: "/posts", text: "Posts" },
   ];
 

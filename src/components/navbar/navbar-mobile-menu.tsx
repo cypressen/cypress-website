@@ -24,7 +24,7 @@ const NavBarMobileMenu = () => {
           </Avatar>
         </DropdownMenuTrigger>
 
-        <DropdownMenuContent className="maple-font">
+        <DropdownMenuContent>
           <DropdownMenuItem>
             <StatusItem />
           </DropdownMenuItem>

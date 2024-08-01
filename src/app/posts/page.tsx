@@ -3,6 +3,6 @@ const PostsHomePage = () => {
     <div>
       <h1>Posts Home Page</h1>
     </div>
-  );
-};
-export default PostsHomePage;
+  )
+}
+export default PostsHomePage

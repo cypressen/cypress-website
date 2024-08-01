@@ -51,7 +51,7 @@ const Navbar = () => {
     );
   };
   return (
-    <NavigationMenu className="maple-font max-w-full  justify-between select-none shadow-md backdrop-filter backdrop-blur-lg p-.8">
+    <NavigationMenu className="max-w-full  justify-between select-none shadow-md backdrop-filter backdrop-blur-lg p-.8">
       {isMobile ? <MobileVer /> : <PCVer />}
     </NavigationMenu>
   );

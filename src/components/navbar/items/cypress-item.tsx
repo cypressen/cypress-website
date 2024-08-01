@@ -1,6 +1,6 @@
-import Link from "next/link";
-import Image from "next/image";
-import { NavigationMenuItem } from "@/components/ui/navigation-menu";
+import Link from 'next/link'
+import Image from 'next/image'
+import { NavigationMenuItem } from '@/components/ui/navigation-menu'
 const CypressItem = () => {
   return (
     <NavigationMenuItem className="list-none">
@@ -11,10 +11,11 @@ const CypressItem = () => {
           width={64}
           height={28}
           className="flex h-7 w-16 ml-3"
+          priority
         />
       </Link>
     </NavigationMenuItem>
-  );
-};
+  )
+}
 
-export default CypressItem;
+export default CypressItem
