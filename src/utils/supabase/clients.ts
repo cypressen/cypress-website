@@ -1,11 +1,23 @@
 import { createBrowserClient } from '@supabase/ssr'
 import { createServerClient, type CookieOptions } from '@supabase/ssr'
+import { createClient } from '@supabase/supabase-js'
 import { cookies } from 'next/headers'
 
 const createSupabaseClient = () => createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 )
+
+const createAdminAuthClient = () => createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_SERVICE_ROLE_KEY!,
+    {
+        auth: {
+            autoRefreshToken: false,
+            persistSession: false
+        }
+    }
+).auth.admin
 
 
 
@@ -35,4 +47,4 @@ const createSupabaseServerClient = () => {
     )
 }
 
-export { createSupabaseClient, createSupabaseServerClient }
+export { createSupabaseClient, createSupabaseServerClient, createAdminAuthClient }

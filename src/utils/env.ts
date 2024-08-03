@@ -1,4 +1,4 @@
-
+// suspending
 import { z } from "zod";
 const envSchema = z.object({
     SUPABASE_URL: z.string().trim().min(1),
